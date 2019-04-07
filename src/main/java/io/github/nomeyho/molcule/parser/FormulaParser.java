@@ -8,10 +8,19 @@ public class FormulaParser {
     private final Stack<StackItem> stack = new Stack<>();
     private final String formula;
 
+    /**
+     * Create a new formula parser
+     * @param formula the formula to parse (e.g. "H2O")
+     */
     public FormulaParser(final String formula) {
         this.formula = formula;
     }
 
+    /**
+     * Parse a formula
+     * @return the occurrences of each atom in the formula
+     * @throws FormulaParsingException if an invalid formula was provided
+     */
     public Map<Element, Integer> parse() throws FormulaParsingException {
         this.initStack();
         this.readTokens();
