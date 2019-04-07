@@ -6,7 +6,7 @@ Simple molecular formula parser for Java
 <dependency>
   <groupId>io.github.nomeyho</groupId>
   <artifactId>molecular-formula-parser</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
 </dependency>
 ```
 
