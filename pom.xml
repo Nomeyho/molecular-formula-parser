@@ -5,13 +5,54 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.nomeyho</groupId>
-  <artifactId>molecular-parser</artifactId>
-  <version>1.0.0-RELEASE</version>
+  <artifactId>molecular-formula-parser</artifactId>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
 
-  <name>molecular-parser</name>
-  <description>Molecular parser for Java</description>
+  <name>molecular-formula-parser</name>
+  <description>Simple molecular formula parser for Java</description>
   <url>https://github.com/Nomeyho/molecular-parser</url>
+
+  <organization>
+    <name>io.github.nomeyho</name>
+    <url>https://github.com/Nomeyho</url>
+  </organization>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/Nomeyho/molecular-formular-parser/issues</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://github.com/Nomeyho/molecular-parser/blob/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/Nomeyho/molecular-formular-parser</url>
+    <connection>scm:git:git://github.com/Nomeyho/molecular-formular-parser.git </connection>
+    <developerConnection>scm:git:ssh://git@github.com:Nomeyho/molecular-formular-parser.git</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Nomeyho</name>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -79,6 +120,19 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
 
