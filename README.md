@@ -1,5 +1,5 @@
 # Molecular formula parser
-Simple molecular formula parser for Java
+Simple molecular formula parser for Java 8
 
 ## Install
 ```
